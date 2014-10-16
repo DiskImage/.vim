@@ -1,0 +1,11 @@
+BoldAsFont=no
+Transparency=glass
+Term=xterm
+Rows=50
+Locale=en_US
+Charset=UTF-8
+Columns=100
+ClicksPlaceCursor=yes
+RightClickAction=menu
+CursorType=block
+OpaqueWhenFocused=no
