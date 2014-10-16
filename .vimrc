@@ -114,7 +114,17 @@ if has("mouse")
     set mouse=a
 endif
 
-"Auto launch NERDTree when launching vim without specifying a file
-autocmd vimenter * if !argc() | NERDTree | endif
+" NERDTree specific configuration
+    "NERDTree Startup/Shutdown configuration
+        " Open a NERDTree automatically when vim starts up if no files were specified
+        autocmd StdinReadPre * let s:std_in=1
+        autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+        "Close vim if the only window left open is a NERDTree
+        autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+    " Change default NERDTree options
+        let g:NERDTreeShowHidden=1
+
+    "Makes Ctrl+N keyboard shortcut to toggle NERDTree open/closed
+        map <C-n> :NERDTreeToggle<CR>
