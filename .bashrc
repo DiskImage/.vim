@@ -69,4 +69,4 @@ else
 fi
 
 #Path variable declarations
-PATH=/usr/local/bin:/usr/bin:~/bin
+#PATH=/usr/local/bin:/usr/bin:~/bin

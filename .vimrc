@@ -75,7 +75,7 @@ set nostartofline   " don't jump to first character when paging
 "let &t_te.="\e[?30h"
 
 
-"filetype plugin on
+filetype plugin on
 
 set foldmethod=indent
 set foldnestmax=10
@@ -121,7 +121,8 @@ endif
         autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
         "Close vim if the only window left open is a NERDTree
-        autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"        autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 
     " Change default NERDTree options
         let g:NERDTreeShowHidden=1
