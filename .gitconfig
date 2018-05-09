@@ -1,0 +1,15 @@
+[user]
+	name = Ian Graves
+[color]
+	ui = auto
+[core]
+	editor = /usr/bin/vim
+[alias]
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	gud = reset --hard
+	lost = reset --hard
+	moar = pull
+	frakked = rm
+	rekt = push --force
+	co = checkout
