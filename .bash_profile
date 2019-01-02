@@ -30,27 +30,13 @@ PS1="\u@\h \[\033[32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 #PS1="\w \$(parse_git_branch)\$"
 export PS1
 
-
-terminate_core(){
-  lsof -P | grep ':3000' | awk '{print $2}' | xargs kill -9
-}
-
-#Turn on akitabot in CLI mode
-alias akitabot="coffee ~/akitabox/akitabot/node_modules/.bin/hubot"
 alias prune_juice="git fetch origin --prune"
 alias crotch="git branch -a"
 alias salt_n_pepa="git push --follow-tags"
 alias gimme_gimme="git pull && npm install && npm update"
-alias burn_baby_burn="SETUP=1 node .tmp/app.js"
 alias wat="echo \"I don't even know, bruh...\""
 alias thanks="echo \"NP, bruh!\""
-alias cz="rm -f .git/hooks/pre-commit && git cz"
 alias gut="git"
-alias npm_global_links="npm list -g --link --depth=0"
-alias npm_local_links="find node_modules/\@akitabox/ -type l -ls && npm ls --link --depth=0"
-
-alias sage_tunnel="echo 'Should set up an SSH Tunnel'"
-alias do_the_thing="cd ~/akitabox/ && lerna run start --parallel"
 
 alias ls="ls -Gh"
 alias la="ls -Ghal"
