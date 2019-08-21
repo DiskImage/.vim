@@ -12,4 +12,5 @@
 	moar = pull
 	frakked = rm
 	rekt = push --force
+	buzzed = push --force-with-lease
 	co = checkout
